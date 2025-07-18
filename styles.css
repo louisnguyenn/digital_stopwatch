@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(218, 228, 238);
+}
+
+#header1 {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    opacity: 80%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid;
+    border-radius: 50px;
+    padding: 30px;
+    background-color: white;
+}
+
+#display {
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+    opacity: 70%;
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.758);
+    margin-bottom: 25px;
+}
+
+#controls button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+#start {
+    background-color: rgb(113, 203, 113);
+}
+
+#start:hover {
+    background-color: rgb(113, 203, 113, 0.8);
+}
+
+#stop {
+    background-color: rgb(203, 113, 113);
+}
+
+#stop:hover {
+    background-color: rgb(203, 113, 113, 0.8);
+}
+
+#reset {
+    background-color: rgb(122, 113, 203);
+}
+
+#reset:hover {
+    background-color: rgb(122, 113, 203, 0.8);
+}
