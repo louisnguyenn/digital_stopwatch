@@ -24,7 +24,12 @@ stop = () => {
 }
 
 reset = () => {
-
+    clearInterval(timer);
+    
+    start = 0;
+    elasped = 0;
+    isRunning = false;
+    display.textContent = "00:00:00:00";
 }
 
 update = () => {
