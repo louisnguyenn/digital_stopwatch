@@ -6,15 +6,21 @@ let elasped = 0;
 let isRunning = false;
 
 start = () => {
-    if (!isRunning)
+    if (!isRunning) 
     {
         start = Date.now() - elasped;
         timer = setInterval(update, 10);
+        isRunning = true;
     }
 }
 
 stop = () => {
-
+    if (isRunning === true)
+    {
+        clearInterval(timer);
+        elasped = Date.now() - start;
+        isRunning = false;
+    }
 }
 
 reset = () => {
@@ -33,6 +39,11 @@ update = () => {
     minutes = Math.floor(elasped / (1000 * 60) % 60);
     seconds = Math.floor(elasped / 1000 % 60);
     miliseconds = Math.floor(elasped % 1000 / 10)
-    
+
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+    miliseconds = String(miliseconds).padStart(2, "0");
+
     display.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`
 }
